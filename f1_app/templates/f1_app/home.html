@@ -1,0 +1,31 @@
+{% extends 'f1_app/base.html' %}
+{% block content %}
+<div class="p-5 mb-4 bg-dark text-white rounded-0" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.ceskeokruhy.cz/site/assets/files/7288/f1_2026-v1.1000x0.jpeg') center/cover;">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold" style="border-left: 5px solid #E10600; padding-left: 15px;">Vítejte ve světě Formule 1</h1>
+        <p class="col-md-8 fs-4 mt-3">Sledujte statistiky stájí, profily jezdců a detaily závodních okruhů na jednom místě.</p>
+        <a href="{% url 'team_list' %}" class="btn btn-f1 btn-lg mt-2">Zobrazit stáje</a>
+    </div>
+</div>
+
+<div class="row text-center mt-5">
+    <div class="col-md-4 mb-3">
+        <div class="card p-4 f1-card">
+            <h3 class="display-4 fw-bold text-dark">{{ stats.teams_count }}</h3>
+            <p class="text-muted text-uppercase fw-bold">Týmy</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card p-4 f1-card">
+            <h3 class="display-4 fw-bold text-dark">{{ stats.drivers_count }}</h3>
+            <p class="text-muted text-uppercase fw-bold">Aktivní jezdci</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card p-4 f1-card">
+            <h3 class="display-4 fw-bold text-dark">{{ stats.tracks_count }}</h3>
+            <p class="text-muted text-uppercase fw-bold">Závodní okruhy</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
