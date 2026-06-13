@@ -1,0 +1,15 @@
+# Virtuální prostředí
+venv/
+env/
+.venv/
+
+# Python cache (zbytečné soubory, co si Python tvoří sám)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Nastavení VS Code
+.vscode/
+
+# Poznámka: db.sqlite3 úmyslně NEIGNORUJEME, aby učitel viděl naplněná data.
